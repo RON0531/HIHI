@@ -1,0 +1,150 @@
+body {
+    font-family: 'Noto Sans TC', "Microsoft JhengHei", sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+    
+    background: linear-gradient(135deg, #e6fffa 0%, #e0f7fa 50%, #e0f2fe 100%);
+    background-attachment: fixed; 
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;           
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.header-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin: 0;
+    text-align: left;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px; 
+}
+.div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 75px;
+    width: 200px;
+    background-image: linear-gradient(to right, rgb(0, 255, 191), rgb(0, 195, 255));
+
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+
+    border: 1px solid #00c6ff;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.div:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 195, 255, 0.4);
+}
+
+.div:active {
+    transform: scale(0.98);
+}
+
+.main-content {
+    display: flex;             
+    justify-content: space-between;
+    align-items: flex-start;   
+    gap: 30px;                
+    margin-top: 20px;
+}
+
+
+.media-card {
+    flex: 1;                   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+
+.media-card h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.media-card img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.student-btn-group {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px;               
+    min-height: 50vh;        
+    margin-top: 20px;
+}
+
+.button {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    height: 340px;
+    padding: 25px;
+
+    background: linear-gradient(145deg, #00ffcc, #00bfff);
+    
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.6),
+                0 0 50px rgba(0, 191, 255, 0.3);
+
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 195, 255, 0.4);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+.chart-container {
+    width: 350px;       
+    height: 350px;      
+    margin: 0 auto;     
+    position: relative;
+}
