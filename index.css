@@ -1,118 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Noto Sans TC', "Microsoft JhengHei", sans-serif;
     margin: 0;
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #0b132b; 
+    color: #ffffff;
     min-height: 100vh;
-
-    
-    background: linear-gradient(135deg, #e6fffa 0%, #e0f7fa 50%, #e0f2fe 100%);
-    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .header-container {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;           
+    justify-content: space-between; /* 標題靠左、導覽靠右 */
+    align-items: center;
     width: 100%;
+    max-width: 1100px;
     padding: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .header-container h1 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 900;
-    color: #1a1a1a;
+    color: #ffffff;
     margin: 0;
-    text-align: left;
+    /* 標題霓虹發光效果 */
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
 }
 
 .button-container {
     display: flex;
-    gap: 15px; 
+    gap: 12px;
 }
-.div {
+
+.button.nav-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
-    height: 75px;
-    width: 200px;
-    background-image: linear-gradient(to right, rgb(0, 255, 191), rgb(0, 195, 255));
-
-    color: #000000;
-    font-size: 18px;
+    height: 42px;
+    padding: 0 18px;
+    background: #1c2541;
+    color: #00f2fe;
+    font-size: 15px;
     font-weight: bold;
-
-    border: 1px solid #00c6ff;
-    outline: none;
+    border: 2px solid #00f2fe;
     border-radius: 8px;
     cursor: pointer;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.div:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 195, 255, 0.4);
-}
-
-.div:active {
-    transform: scale(0.98);
+.button.nav-btn:hover {
+    background: #00f2fe;
+    color: #0b132b;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.7);
 }
 
 .main-content {
-    display: flex;             
+    display: flex;
     justify-content: space-between;
-    align-items: flex-start;   
-    gap: 30px;                
-    margin-top: 20px;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 10px;
 }
 
-
 .media-card {
-    flex: 1;                   
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;   
+    align-items: flex-start;
+    background: #162447;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 242, 254, 0.2);
 }
 
 .media-card h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 0;
-    margin-bottom: 12px;
-    color: #1a1a1a;
+    margin-bottom: 15px;
+    color: #00f2fe;
 }
 
 .media-card img {
     width: 100%;
-    max-width: 500px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .video-container {
     width: 100%;
-    max-width: 700px;
     aspect-ratio: 16 / 9;
 }
 
 .video-container iframe {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .student-btn-group {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 30px;               
-    min-height: 50vh;        
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 60vh;
 }
 
-.button {
-   display: flex;
+.button.long-card {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -121,6 +126,7 @@ body {
     height: 340px;
     padding: 25px;
 
+    /* 強烈初音青綠 -> 亮藍漸層 */
     background: linear-gradient(145deg, #00ffcc, #00bfff);
     
     border: 3px solid #ffffff;
@@ -134,17 +140,83 @@ body {
                 box-shadow 0.3s ease;
 }
 
-.button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 195, 255, 0.4);
+.card-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 12px;
 }
 
-.button:active {
-    transform: scale(0.98);
+.card-sub {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0b132b;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 6px 16px;
+    border-radius: 20px;
 }
-.chart-container {
-    width: 350px;       
-    height: 350px;      
-    margin: 0 auto;     
+
+/* 懸浮暴增發光與浮起動畫 */
+.button.long-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 255, 204, 0.9),
+                0 0 70px rgba(0, 191, 255, 0.6);
+}
+
+.button.long-card:active {
+    transform: translateY(-4px) scale(0.98);
+}
+
+
+.chart-wrapper {
     position: relative;
+    width: 100%;
+    max-width: 420px; 
+    height: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #162447;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header-container h1 {
+        font-size: 22px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .student-btn-group {
+        flex-direction: column;
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .button.long-card {
+        width: 100%;
+        max-width: 300px;
+        height: 180px;
+    }
+/
+    .chart-wrapper {
+        max-width: 92vw;
+        height: 360px;
+        padding: 10px;
+    }
 }
