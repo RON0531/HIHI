@@ -1,6 +1,3 @@
-/* ==========================================
-   1. 全局基本設定與跨裝置 RWD 重置
-   ========================================== */
 * {
     box-sizing: border-box;
 }
@@ -17,9 +14,6 @@ body {
     align-items: center;
 }
 
-/* ==========================================
-   2. 通用頁首區塊 (Header)
-   ========================================== */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -42,10 +36,6 @@ body {
     display: flex;
     gap: 15px;
 }
-
-/* ==========================================
-   3. 恢復原始設計的通用按鈕 (.button / .div)
-   ========================================== */
 .button, .div {
     display: inline-flex;
     justify-content: center;
@@ -53,7 +43,6 @@ body {
 
     height: 75px;
     width: 200px;
-    /* 原始青藍色漸層 */
     background-image: linear-gradient(to right, rgb(0, 255, 191), rgb(0, 195, 255));
 
     color: #000000;
@@ -76,17 +65,11 @@ body {
 .button:active, .div:active {
     transform: scale(0.98);
 }
-
-/* 頂部導覽專用小按鈕（使用原版風格，僅適當縮放高度） */
 .button.nav-btn {
     height: 48px;
     width: 130px;
     font-size: 16px;
 }
-
-/* ==========================================
-   4. 首頁：照片與影片左右並排區塊
-   ========================================== */
 .main-content {
     display: flex;
     justify-content: space-between;
@@ -132,10 +115,6 @@ body {
     height: 100%;
     border-radius: 10px;
 }
-
-/* ==========================================
-   5. 同學網址頁：中間按鈕置中區塊
-   ========================================== */
 .student-btn-group {
     display: flex;
     justify-content: center;
@@ -145,10 +124,6 @@ body {
     max-width: 1100px;
     min-height: 50vh;
 }
-
-/* ==========================================
-   6. 圖表頁：Chart.js 圓餅圖容器
-   ========================================== */
 .chart-wrapper {
     position: relative;
     width: 100%;
@@ -161,10 +136,6 @@ body {
     border: 1px solid rgba(0, 242, 254, 0.3);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
-
-/* ==========================================
-   7. 📱 手機與平板響應式媒體查詢 (RWD)
-   ========================================== */
 @media (max-width: 768px) {
     body {
         padding: 12px;
